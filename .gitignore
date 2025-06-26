@@ -485,3 +485,5 @@ $RECYCLE.BIN/
 API/appsettings.json
 
 node_modules
+API/reactivities.db-shm
+.gitignore

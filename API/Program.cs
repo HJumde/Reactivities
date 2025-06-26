@@ -1,3 +1,7 @@
+using System.Reflection;
+using Application.Activities.Command;
+using Application.Activities.Core;
+using Application.Activities.Queries;
 using Microsoft.EntityFrameworkCore;
 using Persistance;
 
@@ -11,6 +15,8 @@ builder.Services.AddDbContext<AppDbContext>(opt =>
     opt.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 builder.Services.AddCors();
+builder.Services.AddMediatR(x => x.RegisterServicesFromAssemblyContaining<GetActivityList.Handler>());
+builder.Services.AddAutoMapper(typeof(MappingProfiles).Assembly);
 
 var app = builder.Build();
 
