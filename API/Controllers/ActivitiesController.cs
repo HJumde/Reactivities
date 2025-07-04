@@ -1,11 +1,8 @@
 using Application.Activities.Command;
 using Application.Activities.Queries;
 using Domain;
-using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Persistance;
+
 
 namespace API.Controllers
 {
